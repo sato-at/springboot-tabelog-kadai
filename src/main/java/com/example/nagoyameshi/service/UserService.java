@@ -167,4 +167,13 @@ public class UserService {
 		// 認証情報を更新する
 		SecurityContextHolder.getContext().setAuthentication(newAuthentication);
 	}
+
+	// パスワード再設定
+	public User findByEmail(String email) {
+		return userRepository.findByEmail(email);
+	}
+	
+	public User save(User user) {
+	    return userRepository.save(user);
+	}
 }
